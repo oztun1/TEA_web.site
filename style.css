@@ -6,13 +6,11 @@
 *,
 *::before,
 *::after{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     border: 0;
-     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
 }
-
 a,
 a:link,
 a:visited{
@@ -45,24 +43,27 @@ p{
 .header{
     background-image: url(./img/alice-pasqual-xdD-x2Y2SPI-unsplash.jpg);
     background-position:center ;
+    background-size: center;
     background-attachment: fixed;
     height: 100vh;
 }
 
 .header-navbar{
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
 }
 
 .header-logo{
-font-size: 16px;
-letter-spacing: 2px;
-border-bottom: 5px;
-border-radius: 35px;
-padding-bottom: 5px;
-}
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #000;
+    border-radius: 35px;
+    padding-bottom: 5px;
+ }
+
+
 ul{
     display: flex;
 }
@@ -207,3 +208,205 @@ h4{
     font-weight: 100;
 }
 
+
+.about-text p{
+    font-size: 15px;
+    text-align: center;
+    color: #2c272c;
+}
+
+/*PORTFOLIO*/
+.portfolio{
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.portfolio-item{
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.portfolio-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+width: 100%;
+height: 100%;
+background-color: #2d1602;
+position: absolute;
+top: 100%;
+left: 0;
+opacity: 0.8;
+color: white;
+font-size: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: .5s;
+}
+
+.portfolio-item:hover .overlay{
+top:0;
+
+}
+
+.portfolio-item:hover img{
+    transform: scale(1.1);
+}
+
+/*CONTACT*/
+ 
+.contact{
+    padding: 10px 0;
+}
+
+.contact h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #4b3514;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.contact h2::after{
+    content: ""; 
+    width: 30px;
+    height: 3px;
+    background-color:  #4b3514;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    
+}
+
+.contact-content{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    flex-basis: 33%;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+.contact-item i{
+    font-size: 25px;
+    margin-bottom: 30px;
+    color:#4b3514;
+   
+}
+
+.contact-item p{
+    font-size: 14px;
+    line-height: 33px;
+
+}
+
+.footer h2{
+     width:100%;
+     text-align: center;
+     margin: 0 auto;
+     color: #4b3514;
+     font-size: 30px;
+     font-weight: 600;
+     padding: 55px 0;
+
+}
+
+.footer h2::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #4b3514;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+
+}
+
+.footer{
+  background-color: #000;
+}
+
+.footer-copyright{
+    color: #ffff;
+    text-align: center;
+    flex-basis: 55%;
+    line-height: 2;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-social i{
+    color:#fff;
+    margin-bottom: 50px;
+    font-size: 25px;
+    padding: 0 45px;
+
+}
+
+.footer-social:first-child{
+   margin-left: 70px;
+
+
+}
+
+#menu-icon{
+    font-size: 25px;
+    display: none;
+    margin-left:  50px;
+
+}
+
+@media only screen and (max-width:800px){
+    .header-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: #4b300b;
+        width: 100px;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+
+}
+.header-menu ul li{
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.header-menu ul li a{
+    color: #fff;
+}
+
+.header-menu #menu-icon{
+    display: block;
+    cursor: pointer;
+}
